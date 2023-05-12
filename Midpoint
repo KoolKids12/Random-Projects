@@ -1,0 +1,60 @@
+// MIDPOINT.cpp
+
+#include <iostream>
+using namespace std;
+
+// Global structure declarations
+struct point
+{
+    float x;
+    float y;
+};
+
+struct line
+{
+    point p1;
+    point p2;
+};
+
+// function declaration
+float mid1(line theLine); 
+float mid2(line theLine);
+
+//begin main function
+int main()
+{
+    line L;
+    float m;
+    float m2;
+
+
+    double l;
+
+    cout << "Enter the x coordinate of P1: ";
+    cin >> L.p1.x;
+    cout << "Enter the y coordinate of P1: ";
+    cin >> L.p1.y;
+    cout << "Enter the x coordinate of P2: ";
+    cin >> L.p2.x;
+    cout << "Enter the y coordinate of P2: ";
+    cin >> L.p2.y;
+
+    m = mid1(L); // pass the line to the mid1 function
+    m2 = mid2(L); // pass the line to the mid2 function
+
+    cout << "The midpoint of the line is " << m << " , " << m2 << endl;
+
+    return 0;
+} // end of main function
+
+//begin mid functions
+float mid1(line theLine)
+{
+    return((theLine.p1.x + theLine.p2.x) / 2);
+} //end mid1 function
+
+
+float mid2(line theLine)
+{
+    return((theLine.p1.y + theLine.p2.y) / 2);
+} //end mid2 function
